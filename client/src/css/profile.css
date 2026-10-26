@@ -1,0 +1,5 @@
+.review-form { display: grid; gap: 0.7rem; padding: 1rem; border: 1px dashed var(--brand-200); border-radius: var(--radius-md); background: var(--brand-50); margin-bottom: 1rem; }
+.review-form h3 { font-size: var(--text-md); }
+.star-input { display: flex; gap: 0.15rem; }
+.star-input button { background: none; border: 0; padding: 0.2rem; color: var(--ink-300); display: grid; }
+.star-input button.on { color: #f5a623; }

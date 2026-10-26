@@ -1,0 +1,8 @@
+/* Cross-cutting responsive rules. Page-specific breakpoints live in each page's stylesheet. */
+@media (max-width: 640px) {
+  :root { --nav-height: 64px; }
+  .container { width: min(100% - 1.5rem, var(--container)); }
+  .hero { padding: var(--space-7) 0 var(--space-6); }
+  .toast-region { right: 0.75rem; left: 0.75rem; bottom: 0.75rem; width: auto; }
+  .btn-lg { min-height: 48px; padding: 0 1.4rem; }
+}

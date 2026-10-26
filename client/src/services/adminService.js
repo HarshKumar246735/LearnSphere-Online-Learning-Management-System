@@ -1,0 +1,21 @@
+import api from './api.js';
+
+export const getAdminDashboard = (signal) => api.get('/admin/dashboard', { signal });
+export const getAdminUsers = (params, signal) => api.get('/admin/users', { params, signal });
+export const setUserRole = (id, role) => api.patch(`/admin/users/${id}/role`, { role });
+export const setUserActive = (id, isActive) => api.patch(`/admin/users/${id}/status`, { isActive });
+export const getAdminCourses = (params, signal) => api.get('/admin/courses', { params, signal });
+export const setCourseStatus = (id, status) => api.patch(`/admin/courses/${id}/status`, { status });
+export const createCategory = (payload) => api.post('/admin/categories', payload);
+export const updateCategory = (id, payload) => api.patch(`/admin/categories/${id}`, payload);
+export const deleteCategory = (id) => api.delete(`/admin/categories/${id}`);
+export const getAdminReviews = (params, signal) => api.get('/admin/reviews', { params, signal });
+export const moderateReview = (id, isHidden) => api.patch(`/admin/reviews/${id}`, { isHidden });
+export const getAdminTestimonials = (signal) => api.get('/admin/testimonials', { signal });
+export const approveTestimonial = (id, approved) => api.patch(`/admin/testimonials/${id}`, { approved });
+export const deleteTestimonial = (id) => api.delete(`/admin/testimonials/${id}`);
+export const getReports = (params, signal) => api.get('/admin/reports', { params, signal });
+export const resolveReport = (id, payload) => api.patch(`/admin/reports/${id}`, payload);
+export const getAdminSettings = (signal) => api.get('/admin/settings', { signal });
+export const saveAdminSettings = (payload) => api.patch('/admin/settings', payload);
+export const getPublicSettings = (signal) => api.get('/settings/public', { signal });

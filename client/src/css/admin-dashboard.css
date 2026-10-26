@@ -1,0 +1,3 @@
+/* Admin pages reuse the shared tables, filters and cards defined in student-dashboard.css. */
+.filters.card .field { min-width: 180px; }
+.dash-main .filters { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }

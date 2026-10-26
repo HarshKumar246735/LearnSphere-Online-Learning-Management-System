@@ -1,0 +1,25 @@
+import api from './api.js';
+
+export const getInstructorDashboard = (signal) => api.get('/instructor/dashboard', { signal });
+export const getInstructorStudents = (params, signal) => api.get('/instructor/students', { params, signal });
+export const getInstructorAnalytics = (signal) => api.get('/instructor/analytics', { signal });
+export const getMyCourses = (signal) => api.get('/courses/mine', { signal });
+export const getManagedCourse = (id, signal) => api.get(`/courses/manage/${id}`, { signal });
+export const createCourse = (payload) => api.post('/courses', payload);
+export const updateCourse = (id, payload) => api.patch(`/courses/${id}`, payload);
+export const deleteCourse = (id) => api.delete(`/courses/${id}`);
+export const setPublished = (id, published) => api.patch(`/courses/${id}/publish`, { published });
+export const addSection = (courseId, title) => api.post(`/courses/${courseId}/sections`, { title });
+export const renameSection = (id, title) => api.patch(`/sections/${id}`, { title });
+export const deleteSection = (id) => api.delete(`/sections/${id}`);
+export const reorderSections = (courseId, ids) => api.patch(`/courses/${courseId}/sections/reorder`, { ids });
+export const addLesson = (sectionId, payload) => api.post(`/sections/${sectionId}/lessons`, payload);
+export const updateLesson = (id, payload) => api.patch(`/lessons/${id}`, payload);
+export const deleteLesson = (id) => api.delete(`/lessons/${id}`);
+export const reorderLessons = (sectionId, ids) => api.patch(`/sections/${sectionId}/lessons/reorder`, { ids });
+export const getMyQuizzes = (signal) => api.get('/quizzes/mine', { signal });
+export const createQuiz = (courseId, payload) => api.post(`/courses/${courseId}/quizzes`, payload);
+export const updateQuiz = (id, payload) => api.patch(`/quizzes/${id}`, payload);
+export const deleteQuiz = (id) => api.delete(`/quizzes/${id}`);
+export const sendAnnouncement = (courseId, payload) => api.post(`/courses/${courseId}/announcements`, payload);
+export const getCategoriesList = (signal) => api.get('/categories', { signal });

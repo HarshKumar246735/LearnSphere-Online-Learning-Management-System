@@ -1,0 +1,13 @@
+.cert-card { position: relative; padding: 1.5rem; border-radius: var(--radius-xl); border: 2px solid var(--brand-200); background: linear-gradient(135deg, #fff, var(--brand-50)); display: grid; gap: 0.5rem; }
+.cert-card > svg { color: var(--brand-600); }
+.cert-card h3 { font-size: var(--text-lg); }
+.cert-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: var(--text-sm); letter-spacing: 0.04em; color: var(--ink-900); background: #fff; display: inline-block; padding: 0.25rem 0.6rem; border-radius: var(--radius-sm); border: 1px dashed var(--ink-300); width: fit-content; }
+.verify-form { display: flex; gap: 0.6rem; }
+.verify-form .input-icon { flex: 1; }
+.verify-box { padding: 1.5rem; display: grid; gap: 0.75rem; justify-items: start; }
+.verify-box.valid svg { color: var(--mint-600); }
+.verify-box.invalid svg { color: var(--rose-600); }
+.verify-box dl { display: grid; gap: 0.6rem; width: 100%; margin: 0; }
+.verify-box dl div { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--line); }
+.verify-box dt { color: var(--ink-500); }
+.verify-box dd { margin: 0; font-weight: 600; text-align: right; }
